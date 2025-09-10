@@ -576,8 +576,10 @@ class RandomNumberGenerator:
             stats_text += f'Desv. Est.: {std_val:.4f}\n'
             stats_text += f'Rango: [{min_val:.4f}, {max_val:.4f}]'
 
-            ax.text(0.02, 0.98, stats_text,
-                    transform=ax.transAxes, verticalalignment='top',
+            ax.text(0.98, 0.98, stats_text,
+                    transform=ax.transAxes,
+                    verticalalignment='top',
+                    horizontalalignment='right',
                     bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8),
                     fontsize=10)
 
@@ -671,6 +673,7 @@ class RandomNumberGenerator:
             cumulative_freq = 0
 
             self.frequency_table = []
+
 
             for i in range(n_intervals):
                 freq = frequencies[i]
